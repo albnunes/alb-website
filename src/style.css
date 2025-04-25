@@ -1,0 +1,215 @@
+:root {
+  --bg-color: #000000;
+  --text-color: #e0e0e0;
+  --accent: #ffffff;
+  --transition: all 0.3s ease;
+  --gradient: linear-gradient(135deg, #ffffff 0%, #808080 100%);
+  --section-padding: 4rem;
+  --section-gap: 6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  background-image: radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 255, 255, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(128, 128, 128, 0.05) 0%,
+      transparent 50%
+    );
+}
+
+/* .app {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+} */
+
+section {
+  /* width: 100vw; */
+  /* padding: 4rem 0; */
+  text-align: center;
+  padding: var(--section-padding) 0;
+}
+
+.profile-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: var(--section-gap);
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+  object-fit: cover;
+  object-position: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.about-section {
+  padding: 4rem 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-section h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1 {
+  font-family: "Nunito", "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2,
+h3 {
+  font-family: "Nunito", "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  position: relative;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: #808080;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: var(--gradient);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+li {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  transition: var(--transition);
+}
+
+li:hover::before {
+  transform: translateX(5px);
+  color: #808080;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 3rem;
+    --section-gap: 4rem;
+  }
+
+  main {
+    gap: var(--section-gap);
+    padding: var(--section-gap) 0;
+  }
+
+  section {
+    padding: var(--section-padding) 1rem;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+}
