@@ -213,3 +213,52 @@ li:hover::before {
     font-size: 1.75rem;
   }
 }
+
+@media (max-width: 480px) {
+  :root {
+    --section-padding: 1.5rem;
+    --section-gap: 2rem;
+  }
+
+  body {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  section {
+    padding: var(--section-padding) 0.5rem;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h2,
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+  }
+}

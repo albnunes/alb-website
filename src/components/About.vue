@@ -35,7 +35,21 @@
 @media (max-width: 768px) {
     .about-section {
         padding: 3rem 1.5rem;
-        margin: 2rem 1rem;
+
     }
+}
+
+.card-icon {
+    background: var(--card-color, #ffffff);
+}
+
+.card::before {
+    background: var(--card-color, #ffffff);
+    box-shadow: 0 0 20px var(--card-color, #ffffff);
+}
+
+.website-link {
+    background: var(--card-color, #ffffff);
+    color: var(--bg-color, #000000);
 }
 </style>
