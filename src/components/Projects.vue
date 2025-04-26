@@ -17,6 +17,13 @@
                     <img src="../assets/c_do_cva.png" alt="CVA Logo" class="custom-icon">
                 </template>
             </Card>
+
+            <Card title="encurtaador ink" description="A simple URL shortener, generates Qrcodes, fast and free made with svelte and cloudflare pages." color="#1E88E5"
+                websiteUrl="https://www.encurtaador.com.br">
+                <template #icon>
+                    <img src="../assets/encurtaador.svg" alt="Link Icon" class="custom-icon" />
+                </template>
+            </Card>
         </div>
     </section>
 </template>
